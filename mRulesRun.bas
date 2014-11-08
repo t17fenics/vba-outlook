@@ -1,4 +1,4 @@
-Attribute VB_Name = "mRulesRun"
+п»їAttribute VB_Name = "mRulesRun"
 Public Sub RulesRun()
 
 Dim MyRules As Rules
@@ -21,8 +21,8 @@ For Each Rule In MyRules
     If corul >= check Then
 
         MyRules.Item(check).Execute
-''        MsgBox ("Правило " & Chr(34) & MyRules.Item(check).Name & Chr(34) & " выполено.")
-''        Debug.Print ("Правило " & Chr(34) & MyRules.Item(check).name & Chr(34) & " выполено.")
+''        MsgBox ("РџСЂР°РІРёР»Рѕ " & Chr(34) & MyRules.Item(check).Name & Chr(34) & " РІС‹РїРѕР»РµРЅРѕ.")
+''        Debug.Print ("РџСЂР°РІРёР»Рѕ " & Chr(34) & MyRules.Item(check).name & Chr(34) & " РІС‹РїРѕР»РµРЅРѕ.")
         
         check = check + 1
 
@@ -38,11 +38,11 @@ End Sub
 
 
 Sub SleepVB(Seconds)
-' ожидание Seconds секунд
+' РѕР¶РёРґР°РЅРёРµ Seconds СЃРµРєСѓРЅРґ
 Dim Start
-Start = Timer ' текущее время в секундах
+Start = Timer ' С‚РµРєСѓС‰РµРµ РІСЂРµРјСЏ РІ СЃРµРєСѓРЅРґР°С…
 Do While Timer < Start + Seconds
-' обеспечивает параллельное выполнение других процессов
+' РѕР±РµСЃРїРµС‡РёРІР°РµС‚ РїР°СЂР°Р»Р»РµР»СЊРЅРѕРµ РІС‹РїРѕР»РЅРµРЅРёРµ РґСЂСѓРіРёС… РїСЂРѕС†РµСЃСЃРѕРІ
 DoEvents
 Loop
 End Sub
