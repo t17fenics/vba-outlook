@@ -7,14 +7,13 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = True
-
-Private Sub Application_ItemSend(ByVal Item As Object, Cancel As Boolean)
-
-End Sub
-
+''процедура выполняется при запуске outlook
 Private Sub Application_NewMail()
 
+''Задержка в 3 секунды перед запуском макроса
 SleepVB ("3")
+
+''Запуск первой процедуры макроса
 RulesRun
 
 End Sub

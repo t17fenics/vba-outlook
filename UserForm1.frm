@@ -1,10 +1,10 @@
 VERSION 5.00
 Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} UserForm1 
    Caption         =   "Новые сообщения!"
-   ClientHeight    =   30
+   ClientHeight    =   3465
    ClientLeft      =   45
    ClientTop       =   330
-   ClientWidth     =   1590
+   ClientWidth     =   3570
    OleObjectBlob   =   "UserForm1.frx":0000
    ShowModal       =   0   'False
    StartUpPosition =   2  'CenterScreen
@@ -25,12 +25,12 @@ End Sub
 
 Private Sub UserForm_Activate()
 
-UserForm1.Height = Label1.Height + Label1.Top + 10 + 17 ''10 пунктов между каждым элементом +17 на заголовок
-UserForm1.Width = Label1.Width + 20
+UserForm1.Height = Label1.Top + Label1.Height + 20 + 15 + 15 ''отступ первого элемента + ширина первого элемента + 10 пунктов между каждым элементом + 15 на заголовок + 15 на рамку
+UserForm1.Width = Label1.Left + Label1.Width + 15
 ''CommandButton1.Top = Label1.Height + 20
 ''CommandButton1.Left = UserForm1.Width / 2 - CommandButton1.Width / 2
-
-
+Label2.Top = Label1.Height + 20
+Label2.Left = UserForm1.Width / 2 - Label2.Width / 2
 End Sub
 
 Private Sub UserForm_Click()
